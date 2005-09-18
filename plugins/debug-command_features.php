@@ -1,6 +1,6 @@
 <?php
 /** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_features.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+ * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_features.php,v 1.1.1.1.2.1 2005/09/18 12:59:38 wolff_borg Exp $
  *
  * \brief Show features state in a convenient way
  *
@@ -42,14 +42,14 @@ class DbgFeatures extends DebuggerCommand {
 		$p = explode(" ", trim($params));
 		$mask = count($p) > 0 ? str_replace('$', '', trim($p[0])) : '';
 		// Get list of all vars
-		global $smarty;
-		$tpl_vars = $smarty->get_template_vars();
+		global $gBitSystem;
+		$tpl_vars = $gBitSystem->mPrefs;
 		// convert to vector of names, filter permissions only, and sort
 		$perms = array();
 		$len = strlen($mask);
 
 		foreach ($tpl_vars as $key => $val) {
-			if ((!$len || $len && preg_match('/' . $mask . '/', $key)) && preg_match('/feature_/', $key))
+			if ((!$len || $len && preg_match('/' . $mask . '/', $key)))
 				$perms[] = array(
 					'name' => $key,
 					'value' => $val

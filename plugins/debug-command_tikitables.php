@@ -1,6 +1,6 @@
 <?php
 /** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_tikitables.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+ * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_tikitables.php,v 1.1.1.1.2.1 2005/09/18 12:59:38 wolff_borg Exp $
  *
  * \brief Show list of Tiki tables in DB schema
  *
@@ -37,18 +37,19 @@ class DbgSQLTables extends DebuggerCommand {
 	function execute($params) {
 		$this->set_result_type(TPL_RESULT);
 
-		$this->set_result_tpl('plugins/tiki-debug_tikitables.tpl');
+		$this->set_result_tpl('bitpackage:debug/debug_tikitables.tpl');
 		//
-		global $tikilib;
+		global $gBitDb;
 		// Is regex to match against var name given?
 		$p = explode(" ", trim($params));
 		$mask = count($p) > 0 ? str_replace('$', '', trim($p[0])) : '';
 		$len = strlen($mask);
 		// Get list of all tables
-		$qr = $tikilib->query("show tables;");
+		
+		$qr = $gBitDb->MetaTables();
 		$tbls = array();
 
-		while ($res = $qr->fetchRow(DB_FETCHMODE_ASSOC)) {
+		foreach ($qr as $res) {
 			/*
 				 * Sample output from MySQL. I.e. array(1) have unpredictable key
 				 * (bcouse of name user defined table)...
@@ -70,8 +71,8 @@ class DbgSQLTables extends DebuggerCommand {
 			 *  }
 				 *  ...
 				 */
-			if (!$len || $len && preg_match('/' . $mask . '/', current($res)))
-				$tbls[] = current($res);
+			if (!$len || $len && preg_match('/' . $mask . '/', $res))
+				$tbls[] = $res;
 		}
 
 		return $tbls;

@@ -1,6 +1,6 @@
 <?php
 /** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_sprint.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+ * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_sprint.php,v 1.1.1.1.2.1 2005/09/18 12:59:38 wolff_borg Exp $
  *
  * \brief Print Smarty vars
  *
@@ -35,7 +35,7 @@ class DbgSPrint extends DebuggerCommand {
 
 	/// Execute command with given set of arguments.
 	function execute($params) {
-		global $smarty;
+		global $gBitSmarty;
 
 		$this->set_result_type(TEXT_RESULT);
 		$result = '';
@@ -45,7 +45,7 @@ class DbgSPrint extends DebuggerCommand {
 			$v = trim(str_replace("$", "", $v));
 
 			if (strlen($v) != 0) {
-				$tmp = $smarty->get_template_vars();
+				$tmp = $gBitSmarty->get_template_vars();
 
 				if (is_array($tmp) && isset($tmp[$v]))
 					$result .= $v . ' = ' . print_r($tmp[$v], true). "\n";

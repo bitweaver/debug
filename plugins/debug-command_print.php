@@ -1,6 +1,6 @@
 <?php
 //
-// $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_print.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+// $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_print.php,v 1.1.1.1.2.1 2005/09/18 12:59:38 wolff_borg Exp $
 //
 // \brief Command to print PHP variables to debug console
 //
@@ -35,7 +35,7 @@ class DbgPrint extends DebuggerCommand
   function execute($params)
   {
     global $debugger;
-    require_once(DEBUG_PKG_PATH.'plugins/debugger.php');
+    require_once(DEBUG_PKG_PATH.'debugger.php');
     //
     $this->set_result_type(TEXT_RESULT);
     $result = '';

@@ -1,6 +1,6 @@
 <?php
 /** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_perm.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+ * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_perm.php,v 1.1.1.1.2.1 2005/09/18 12:59:38 wolff_borg Exp $
  *
  * \brief Show current permissions in a convenient way
  *
@@ -41,12 +41,9 @@ class DbgPermissions extends DebuggerCommand {
 		// Is regex to match against var name given?
 		$p = explode(" ", trim($params));
 		$mask = count($p) > 0 ? str_replace('$', '', trim($p[0])) : '';
-		// Get list of all vars
-		global $smarty;
-		$tpl_vars = $smarty->get_template_vars();
 		// Get descriptions for all permissions
-		global $userlib;
-		$pd = $userlib->get_permissions();
+		global $gBitUser;
+		$pd = $gBitUser->mPerms;
 		$descriptions = array();
 
 		foreach ($pd['data'] as $p)
@@ -56,12 +53,12 @@ class DbgPermissions extends DebuggerCommand {
 		$perms = array();
 		$len = strlen($mask);
 
-		foreach ($tpl_vars as $key => $val) {
-			if ((!$len || $len && preg_match('/' . $mask . '/', $key)) && preg_match('/tiki_p_/', $key))
+		foreach ($pd as $val) {
+			if ((!$len || $len && preg_match('/' . $mask . '/', $val["perm_name"])))
 				$perms[] = array(
-					'name' => $key,
-					'value' => $val,
-					'description' => isset($descriptions[$key]) ? $descriptions[$key] : 'No description'
+					'name' => $val["perm_name"],
+					'value' => $gBitUser->hasPermission($val["perm_name"]),
+					'description' => isset($val["perm_desc"]) ? $val["perm_desc"] : 'No description'
 				);
 		}
 

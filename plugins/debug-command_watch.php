@@ -1,6 +1,6 @@
 <?php
 /** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_watch.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+ * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_watch.php,v 1.1.1.1.2.1 2005/09/18 12:59:38 wolff_borg Exp $
  *
  * \brief Watch command for debugger
  *
@@ -102,9 +102,9 @@ class DbgCmd_Watch extends DebuggerCommand {
 
 	/// Return the name of watches file
 	function watchfile() {
-		global $user;
+		global $gBitUser;
 
-		return "temp/dbg-watch." . $user;
+		return TEMP_PKG_PATH."cache/dbg-watch." . $gBitUser->getUserId();
 	}
 
 	/// Save watchlist for given user. If current list is empty --> remove file.
@@ -136,7 +136,7 @@ class DbgCmd_Watch extends DebuggerCommand {
 		//
 		global $smarty;
 		$smarty->assign_by_ref('watchlist', $result);
-		return $smarty->fetch("plugins/tiki-debug_watch_tab.tpl");
+		return $smarty->fetch("bitpackage:debug/debug_watch_tab.tpl");
 	}
 
 	///
@@ -161,7 +161,7 @@ class DbgCmd_Watch extends DebuggerCommand {
 	function value_of_php_var($v) {
 		global $debugger;
 
-		require_once (DEBUG_PKG_PATH.'plugins/debugger.php');
+		require_once (DEBUG_PKG_PATH.'debugger.php');
 		return $debugger->str_var_dump($v);
 	}
 
