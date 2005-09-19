@@ -1,4 +1,4 @@
-{* $Header: /cvsroot/bitweaver/_bit_debug/templates/debug_console.tpl,v 1.2 2005/09/19 09:20:11 squareing Exp $ *}
+{* $Header: /cvsroot/bitweaver/_bit_debug/templates/debug_console.tpl,v 1.3 2005/09/19 09:39:54 squareing Exp $ *}
 
 {if $gBitUser->hasPermission( 'bit_p_debug_console' ) and $gBitSystem->isFeatureActive( 'feature_debug_console' )}
 	<div class="debugconsole" id="debugconsole" style="position:absolute;background:#fed;top:30px;left:40%;right:1%;height:auto;z-index:2;padding:5px;border:3px solid #900;font-size:12px;{$debugconsole_style}">
@@ -24,12 +24,18 @@
 			</div>
 		{/form}
 
-		{jstabs}
+		{if ( count( $tabs ) > 1 )}
+			{jstabs}
+				{foreach item=tab from=$tabs}
+					{jstab title=$tab.button_caption}
+						{$tab.tab_code}
+					{/jstab}
+				{/foreach}
+			{/jstabs}
+		{else}
 			{foreach item=tab from=$tabs}
-				{jstab title=$tab.button_caption}
-					{$tab.tab_code}
-				{/jstab}
+				{$tab.tab_code}
 			{/foreach}
-		{/jstabs}
+		{/if}
 	</div>
 {/if}
