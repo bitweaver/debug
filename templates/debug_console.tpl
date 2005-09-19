@@ -1,7 +1,7 @@
-{* $Header: /cvsroot/bitweaver/_bit_debug/templates/debug_console.tpl,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $ *}
+{* $Header: /cvsroot/bitweaver/_bit_debug/templates/debug_console.tpl,v 1.1.1.1.2.1 2005/09/19 10:43:58 wolff_borg Exp $ *}
 
-{if $gBitUser->hasPermission( 'bit_p_debug_console' ) and $gBitSystem->isFeatureActive( 'feature_debug_console' )}
-<div class="debugconsole" id="debugconsole" style="position: absolute;background-color: white;top: 10px;left: 20px;right: 310px;height: auto;z-index: 2;padding: 5px;border: 6px ridge #996600;font-size: 12px;{$debugconsole_style}">
+{if $gBitSystem->isPackageActive( 'debug' ) && $gBitUser->hasPermission( 'bit_p_debug_console' ) && $gBitSystem->isFeatureActive( 'feature_debug_console' )}
+<div class="debugconsole" id="debugconsole" style="position: absolute;background-color: white;top: 10px;left: 20px;right: 310px;height: auto;z-index: 2;padding: 5px;border: 6px ridge #996600;font-size: 12px;">
 
 {* Command prompt form *}
 <form method="post" action="{$smarty.server.PHP_SELF}">
@@ -33,7 +33,7 @@
 {if count($tabs) > 1}
   <table><tr>
   {section name=i loop=$tabs}
-    <td><a href="{$tabs[i].button_href}">{$tabs[i].button_caption}</a></div>
+    <td><a href="{$tabs[i].button_href}">{$tabs[i].button_caption}</a>
     </td>
   {/section}
   </tr></table>
@@ -47,4 +47,5 @@
 {/section}
 
 </div>
+<script type="text/javascript">settogglestate('debugconsole');</script>
 {/if}

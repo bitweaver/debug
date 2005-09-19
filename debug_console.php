@@ -1,15 +1,16 @@
 <?php
 
-// $Header: /cvsroot/bitweaver/_bit_debug/debug_console.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+// $Header: /cvsroot/bitweaver/_bit_debug/debug_console.php,v 1.1.1.1.2.1 2005/09/19 10:43:58 wolff_borg Exp $
 
 // Copyright (c) 2002-2005, Luis Argerich, Garland Foster, Eduardo Polidor, et. al.
 // All Rights Reserved. See copyright.txt for details and a complete list of authors.
 // Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details.
 
 //
-// $Header: /cvsroot/bitweaver/_bit_debug/debug_console.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+// $Header: /cvsroot/bitweaver/_bit_debug/debug_console.php,v 1.1.1.1.2.1 2005/09/19 10:43:58 wolff_borg Exp $
 //
 
+global $gBitSmarty;
 require_once ( DEBUG_PKG_PATH.'debugger.php');
 
 // Set default value
