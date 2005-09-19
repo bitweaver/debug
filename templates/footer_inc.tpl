@@ -1,3 +1,3 @@
-{if $gBitSystem->isFeatureActive( 'feature_debug_console' ) and $gBitUser->hasPermission( 'bit_p_debug_console' )}
+{if $gBitSystem->isPackageActive( 'debug' ) and $gBitUser->isAdmin()}
 	{include file="bitpackage:debug/debug_console.tpl"}
 {/if}
