@@ -1,6 +1,6 @@
 <?php
 /** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_sql.php,v 1.2 2005/09/19 09:20:10 squareing Exp $
+ * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_sql.php,v 1.3 2005/09/19 15:52:52 squareing Exp $
  *
  * \brief Exec SQL query on Tiki DB
  *
@@ -20,7 +20,7 @@ class DbgSQLQuery extends DebuggerCommand {
 
 	/// \b Must have function to provide help to debugger console
 	function description() {
-		return 'Exec SQL query on Tiki DB';
+		return 'Execute SQL statements on your database. For security reasons, this has been restricted to SELECT statements.';
 	}
 
 	/// \b Must have function to provide help to debugger console
@@ -30,7 +30,7 @@ class DbgSQLQuery extends DebuggerCommand {
 
 	/// \b Must have function to show example of usage of given command
 	function example() {
-		return 'sql select * from tiki_preferences';
+		return 'sql SELECT * FROM tiki_preferences';
 	}
 
 	/// Execute command with given set of arguments.
@@ -49,7 +49,8 @@ class DbgSQLQuery extends DebuggerCommand {
 		$debugger->msg('SQL query: "' . $params . '"');
 
 		//
-		if (strlen(trim($params)) != 0) {
+		vd($params);
+		if( preg_match( "/^select/i", trim( $params ) ) ) {
 			global $gBitDb;
 
 			$qr = $gBitDb->mDb->query($params);
