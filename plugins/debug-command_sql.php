@@ -1,6 +1,6 @@
 <?php
 /** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_sql.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+ * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_sql.php,v 1.2 2005/09/19 09:20:10 squareing Exp $
  *
  * \brief Exec SQL query on Tiki DB
  *
@@ -65,7 +65,8 @@ class DbgSQLQuery extends DebuggerCommand {
 					// as dimensions...
 					$first_time = true;
 
-					$result = '<table id="sqltable">';
+					$result  = '<table id="data">';
+					$result .= '<caption>SQL Results</caption>';
 
 					while ($res = $qr->fetchRow()) {
 						if ($first_time) {

@@ -1,6 +1,6 @@
 <?php
 /** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_slist.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+ * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_slist.php,v 1.2 2005/09/19 09:20:10 squareing Exp $
  *
  * \brief List of Smarty vars
  *
@@ -58,7 +58,7 @@ class DbgSList extends DebuggerCommand {
 		$idx = 0;
 
 		foreach ($vars as $var) {
-			if (($idx % 3) == 0) {
+			if (($idx % 2) == 0) {
 				$result .= $row . '</tr>';
 
 				$row = '<tr><td>$' . $var . '</td>';

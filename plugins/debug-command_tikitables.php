@@ -1,6 +1,6 @@
 <?php
 /** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_tikitables.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+ * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_tikitables.php,v 1.2 2005/09/19 09:20:10 squareing Exp $
  *
  * \brief Show list of Tiki tables in DB schema
  *
@@ -35,6 +35,7 @@ class DbgSQLTables extends DebuggerCommand {
 
 	/// Execute command with given set of arguments.
 	function execute($params) {
+		global $gBitSystem;
 		$this->set_result_type(TPL_RESULT);
 
 		$this->set_result_tpl('plugins/tiki-debug_tikitables.tpl');
@@ -45,7 +46,7 @@ class DbgSQLTables extends DebuggerCommand {
 		$mask = count($p) > 0 ? str_replace('$', '', trim($p[0])) : '';
 		$len = strlen($mask);
 		// Get list of all tables
-		$qr = $tikilib->query("show tables;");
+		$qr = $gBitSystem->mDb->query("show tables;");
 		$tbls = array();
 
 		while ($res = $qr->fetchRow(DB_FETCHMODE_ASSOC)) {
