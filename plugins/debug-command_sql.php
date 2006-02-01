@@ -1,6 +1,6 @@
 <?php
 /** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_sql.php,v 1.3 2005/09/19 15:52:52 squareing Exp $
+ * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_sql.php,v 1.4 2006/02/01 19:45:29 spiderr Exp $
  *
  * \brief Exec SQL query on Tiki DB
  *
@@ -30,7 +30,7 @@ class DbgSQLQuery extends DebuggerCommand {
 
 	/// \b Must have function to show example of usage of given command
 	function example() {
-		return 'sql SELECT * FROM tiki_preferences';
+		return 'sql SELECT * FROM kernel_prefs';
 	}
 
 	/// Execute command with given set of arguments.
