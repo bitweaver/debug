@@ -1,6 +1,6 @@
 <?php
 /** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_sprint.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+ * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_sprint.php,v 1.2 2006/02/06 22:56:43 squareing Exp $
  *
  * \brief Print Smarty vars
  *
@@ -30,7 +30,7 @@ class DbgSPrint extends DebuggerCommand {
 
 	/// \b Must have functio to show example of usage of given command
 	function example() {
-		return 'sprint user feature_left_column';
+		return 'sprint user left_column';
 	}
 
 	/// Execute command with given set of arguments.
