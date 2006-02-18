@@ -1,6 +1,10 @@
 <?php
 global $gBitSystem;
-$gBitSystem->registerPackage( 'debug', dirname( __FILE__ ).'/' );
+$registerHash = array(
+	'package_name' => 'debug',
+	'package_path' => dirname( __FILE__ ).'/',
+);
+$gBitSystem->registerPackage( $registerHash );
 
 if( $gBitSystem->isPackageActive( 'debug' ) && $gBitUser->isAdmin() ) {
 	// Debug console open/close
