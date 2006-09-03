@@ -1,8 +1,8 @@
-{* $Header: /cvsroot/bitweaver/_bit_debug/templates/debug_console.tpl,v 1.4 2005/09/19 15:41:52 squareing Exp $ *}
+{* $Header: /cvsroot/bitweaver/_bit_debug/templates/debug_console.tpl,v 1.5 2006/09/03 20:07:00 squareing Exp $ *}
 
 {if $gBitUser->isAdmin() and $gBitSystem->isPackageActive( 'debug' )}
 	<div class="debugconsole" id="debugconsole" style="position:absolute;background:#fed;top:30px;left:40%;right:1%;height:auto;z-index:2;padding:5px;border:3px solid #900;font-size:12px;{$debugconsole_style}">
-		<a style="float:right;" href="javascript:toggle('debugconsole');" title="{tr}Close{/tr}">{biticon ipackage=liberty iname=close iexplain=Close}</a>
+		<a style="float:right;" href="javascript:toggle('debugconsole');" title="{tr}Close{/tr}">{biticon ipackage="icons" iname="window-close" iexplain=Close}</a>
 		{form legend="Debugger Console"}
 			<div class="row">
 				{formlabel label="Current URL" for=""}
