@@ -1,9 +1,17 @@
 <?php
-//
-// $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_print.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
-//
-// \brief Command to print PHP variables to debug console
-//
+/** 
+ * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_print.php,v 1.2 2008/06/19 05:54:30 lsces Exp $
+ *
+ * Command to print PHP variables to debug console
+ * 
+ * @author zaufi <zaufi@sendmail.ru>
+ * @package debug
+ * @subpackage plugins
+ */
+
+/**
+ * Initialize
+ */
 require_once(DEBUG_PKG_PATH.'plugins/debugger-ext.php');
 
 /**

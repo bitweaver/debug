@@ -1,20 +1,24 @@
 <?php
-/** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/debugger.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+/** 
+ * @version $Header: /cvsroot/bitweaver/_bit_debug/debugger.php,v 1.2 2008/06/19 05:54:30 lsces Exp $
  *
- * \brief Tiki internal debugger 
+ * Tiki internal debugger 
  *
- * \author zaufi <zaufi@sendmail.ru>
- *
+ * @author zaufi <zaufi@sendmail.ru>
+ * @package debug
  */
 
+/**
+ * Initialize
+ */
 require_once(DEBUG_PKG_PATH.'plugins/debugger-common.php');
 
 /// Path to debugger's external commands
 define('DBG_PLUGINS_DIR', DEBUG_PKG_PATH.'plugins');
 
 /**
- * \brief Class to manage debugger
+ * Class to manage debugger
+ * @package debug
  */
 class Debugger extends ResultType
 {

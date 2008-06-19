@@ -1,13 +1,17 @@
 <?php
-/** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debugger-common.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+/** 
+ * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debugger-common.php,v 1.2 2008/06/19 05:54:30 lsces Exp $
  *
- * \brief Commonly used stuff
- *
- * \author zaufi <zaufi@sendmail.ru>
- *
+ * Commonly used stuff
+ * 
+ * @author zaufi <zaufi@sendmail.ru>
+ * @package debug
+ * @subpackage plugins
  */
 
+/**
+ * Initialize
+ */
 /// Result not available
 define('NO_RESULT', 0);
 

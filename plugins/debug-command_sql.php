@@ -1,11 +1,16 @@
 <?php
-/** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_sql.php,v 1.4 2006/02/01 19:45:29 spiderr Exp $
+/** 
+ * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_sql.php,v 1.5 2008/06/19 05:54:30 lsces Exp $
  *
- * \brief Exec SQL query on Tiki DB
- *
- * \author zaufi <zaufi@sendmail.ru>
- *
+ * Exec SQL query on Tiki DB
+ * 
+ * @author zaufi <zaufi@sendmail.ru>
+ * @package debug
+ * @subpackage plugins
+ */
+
+/**
+ * Initialize
  */
 require_once (DEBUG_PKG_PATH.'plugins/debugger-ext.php');
 

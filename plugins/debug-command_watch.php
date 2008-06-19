@@ -1,11 +1,16 @@
 <?php
-/** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_watch.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+/** 
+ * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_watch.php,v 1.2 2008/06/19 05:54:30 lsces Exp $
  *
- * \brief Watch command for debugger
- *
- * \author zaufi <zaufi@sendmail.ru>
- *
+ * Watch command for debugger
+ * 
+ * @author zaufi <zaufi@sendmail.ru>
+ * @package debug
+ * @subpackage plugins
+ */
+
+/**
+ * Initialize
  */
 require_once (DEBUG_PKG_PATH.'plugins/debugger-ext.php');
 

@@ -1,11 +1,16 @@
 <?php
-/** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_slist.php,v 1.2 2005/09/19 09:20:10 squareing Exp $
+/** 
+ * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_slist.php,v 1.3 2008/06/19 05:54:30 lsces Exp $
  *
- * \brief List of Smarty vars
- *
- * \author zaufi <zaufi@sendmail.ru>
- *
+ * List of Smarty vars
+ * 
+ * @author zaufi <zaufi@sendmail.ru>
+ * @package debug
+ * @subpackage plugins
+ */
+
+/**
+ * Initialize
  */
 require_once (DEBUG_PKG_PATH.'plugins/debugger-ext.php');
 

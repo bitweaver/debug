@@ -1,11 +1,16 @@
 <?php
-/** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_features.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+/** 
+ * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_features.php,v 1.2 2008/06/19 05:54:30 lsces Exp $
  *
- * \brief Show features state in a convenient way
- *
- * \author zaufi <zaufi@sendmail.ru>
- *
+ * Show features state in a convenient way
+ * 
+ * @author zaufi <zaufi@sendmail.ru>
+ * @package debug
+ * @subpackage plugins
+ */
+
+/**
+ * Initialize
  */
 require_once (DEBUG_PKG_PATH.'plugins/debugger-ext.php');
 

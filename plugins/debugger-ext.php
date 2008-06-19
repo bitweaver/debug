@@ -1,16 +1,21 @@
 <?php
-/** \file
- * $Header: /cvsroot/bitweaver/_bit_debug/plugins/debugger-ext.php,v 1.1 2005/09/18 12:06:08 wolff_borg Exp $
+/** 
+ * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debugger-ext.php,v 1.2 2008/06/19 05:54:30 lsces Exp $
  *
- * \brief Base class for external debugger command
- *
- * \author zaufi <zaufi@sendmail.ru>
- *
+ * Base class for external debugger command
+ * 
+ * @author zaufi <zaufi@sendmail.ru>
+ * @package debug
+ */
+
+/**
+ * Initialize
  */
 require_once (DEBUG_PKG_PATH.'plugins/debugger-common.php');
 
 /**
  * \brief Base class for external debugger command
+ * @package debug
  */
 class DebuggerCommand extends ResultType {
 	/**
