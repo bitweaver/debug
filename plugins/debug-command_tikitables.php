@@ -1,6 +1,6 @@
 <?php
 /** 
- * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_tikitables.php,v 1.3 2008/06/19 05:54:30 lsces Exp $
+ * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_tikitables.php,v 1.4 2008/06/19 06:59:45 lsces Exp $
  *
  * Show list of Tiki tables in DB schema
  * 
@@ -15,7 +15,8 @@
 require_once (DEBUG_PKG_PATH.'plugins/debugger-ext.php');
 
 /**
- * \brief Show list of Tiki tables in DB schema
+ * Show list of Tiki tables in DB schema
+ * @package debug
  */
 class DbgSQLTables extends DebuggerCommand {
 	/// \b Must have function to announce command name in debugger console

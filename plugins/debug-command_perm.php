@@ -1,6 +1,6 @@
 <?php
 /** 
- * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_perm.php,v 1.2 2008/06/19 05:54:30 lsces Exp $
+ * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_perm.php,v 1.3 2008/06/19 06:59:45 lsces Exp $
  *
  * Show current permissions state in a convenient way
  * 
@@ -15,7 +15,8 @@
 require_once (DEBUG_PKG_PATH.'plugins/debugger-ext.php');
 
 /**
- * \brief Show current permissions in a convenient way
+ * Show current permissions in a convenient way
+ * @package debug
  */
 class DbgPermissions extends DebuggerCommand {
 	/// \b Must have function to announce command name in debugger console

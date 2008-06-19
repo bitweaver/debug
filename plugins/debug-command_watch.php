@@ -1,6 +1,6 @@
 <?php
 /** 
- * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_watch.php,v 1.2 2008/06/19 05:54:30 lsces Exp $
+ * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_watch.php,v 1.3 2008/06/19 06:59:45 lsces Exp $
  *
  * Watch command for debugger
  * 
@@ -15,7 +15,8 @@
 require_once (DEBUG_PKG_PATH.'plugins/debugger-ext.php');
 
 /**
- * \brief Command 'watch'
+ * Command 'watch'
+ * @package debug
  */
 class DbgCmd_Watch extends DebuggerCommand {
 	/// Array of variables to watch in format: [md5hash] = var_name

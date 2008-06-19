@@ -1,6 +1,6 @@
 <?php
 /** 
- * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_print.php,v 1.2 2008/06/19 05:54:30 lsces Exp $
+ * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_print.php,v 1.3 2008/06/19 06:59:45 lsces Exp $
  *
  * Command to print PHP variables to debug console
  * 
@@ -15,7 +15,8 @@
 require_once(DEBUG_PKG_PATH.'plugins/debugger-ext.php');
 
 /**
- * \brief Command to print PHP variables to debug console
+ * Command to print PHP variables to debug console
+ * @package debug
  */
 class DbgPrint extends DebuggerCommand
 {

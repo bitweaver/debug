@@ -1,6 +1,6 @@
 <?php
 /** 
- * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debugger-common.php,v 1.2 2008/06/19 05:54:30 lsces Exp $
+ * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debugger-common.php,v 1.3 2008/06/19 06:59:45 lsces Exp $
  *
  * Commonly used stuff
  * 
@@ -23,7 +23,8 @@ define('HTML_RESULT', 2);
 define('TPL_RESULT', 3);
 
 /**
- * \brief Every command and debugger itself have a result type.
+ * Every command and debugger itself have a result type.
+ * @package debug
  */
 class ResultType {
 	/// Type of result (see consts defined above)
