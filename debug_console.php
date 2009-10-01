@@ -1,10 +1,10 @@
 <?php
 /** 
- * @version $Header: /cvsroot/bitweaver/_bit_debug/debug_console.php,v 1.2 2008/06/19 05:54:30 lsces Exp $
+ * @version $Header: /cvsroot/bitweaver/_bit_debug/debug_console.php,v 1.3 2009/10/01 13:45:34 wjames5 Exp $
  *
  * Copyright (c) 2002-2005, Luis Argerich, Garland Foster, Eduardo Polidor, et. al.
  * All Rights Reserved. See copyright.txt for details and a complete list of authors.
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See license.txt for details.
+ * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE. See http://www.gnu.org/copyleft/lesser.html for details.
  *
  * @author zaufi <zaufi@sendmail.ru>
  * @package debug
