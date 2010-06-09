@@ -1,6 +1,6 @@
 <?php
 /** 
- * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_perm.php,v 1.3 2008/06/19 06:59:45 lsces Exp $
+ * @version $Header$
  *
  * Show current permissions state in a convenient way
  * 

@@ -1,6 +1,6 @@
 <?php
 /** 
- * @version $Header: /cvsroot/bitweaver/_bit_debug/debugger.php,v 1.2 2008/06/19 05:54:30 lsces Exp $
+ * @version $Header$
  *
  * Tiki internal debugger 
  *

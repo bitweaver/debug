@@ -1,4 +1,4 @@
-{* $Header: /cvsroot/bitweaver/_bit_debug/templates/debug_console_help.tpl,v 1.2 2005/09/19 09:20:11 squareing Exp $ *}
+{* $Header$ *}
 {strip}
 {if $command_result.action eq 'one'}
 	<dl>

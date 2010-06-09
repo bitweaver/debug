@@ -1,4 +1,4 @@
-{* $Header: /cvsroot/bitweaver/_bit_debug/templates/debug_console.tpl,v 1.5 2006/09/03 20:07:00 squareing Exp $ *}
+{* $Header$ *}
 
 {if $gBitUser->isAdmin() and $gBitSystem->isPackageActive( 'debug' )}
 	<div class="debugconsole" id="debugconsole" style="position:absolute;background:#fed;top:30px;left:40%;right:1%;height:auto;z-index:2;padding:5px;border:3px solid #900;font-size:12px;{$debugconsole_style}">

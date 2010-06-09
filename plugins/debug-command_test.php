@@ -1,6 +1,6 @@
 <?php
 /** 
- * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_test.php,v 1.3 2008/06/19 06:59:45 lsces Exp $
+ * @version $Header$
  *
  * Skeleton to quick startup of making new debugger command
  * 

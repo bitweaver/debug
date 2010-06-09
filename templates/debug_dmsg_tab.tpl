@@ -1,4 +1,4 @@
-{* $Header: /cvsroot/bitweaver/_bit_debug/templates/debug_dmsg_tab.tpl,v 1.2 2005/09/19 09:20:11 squareing Exp $ *}
+{* $Header$ *}
 
 <table class="data">
 	<caption>{tr}Page generation debugging log{/tr}</caption>

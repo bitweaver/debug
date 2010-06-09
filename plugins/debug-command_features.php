@@ -1,6 +1,6 @@
 <?php
 /** 
- * @version $Header: /cvsroot/bitweaver/_bit_debug/plugins/debug-command_features.php,v 1.3 2008/06/19 06:59:45 lsces Exp $
+ * @version $Header$
  *
  * Show features state in a convenient way
  * 

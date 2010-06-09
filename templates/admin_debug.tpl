@@ -1,4 +1,4 @@
-{* $Header: /cvsroot/bitweaver/_bit_debug/templates/admin_debug.tpl,v 1.4 2006/03/01 21:12:27 spiderr Exp $ *}
+{* $Header$ *}
 {strip}
 {form}
 	<input type="hidden" name="page" value="{$page}" />

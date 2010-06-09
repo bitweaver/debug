@@ -1,6 +1,6 @@
 <?php
 /** 
- * @version $Header: /cvsroot/bitweaver/_bit_debug/debug_console.php,v 1.4 2009/10/01 14:16:59 wjames5 Exp $
+ * @version $Header$
  *
  * Copyright (c) 2002-2005, Luis Argerich, Garland Foster, Eduardo Polidor, et. al.
  * All Rights Reserved. See below for details and a complete list of authors.

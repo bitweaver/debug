@@ -1,4 +1,4 @@
-{* $Header: /cvsroot/bitweaver/_bit_debug/templates/debug_console_tab.tpl,v 1.2 2005/09/19 09:20:11 squareing Exp $ *}
+{* $Header$ *}
 {* Debug console tab -- to display result of command *}
 
 {* Display command results if we have smth to show... *}
