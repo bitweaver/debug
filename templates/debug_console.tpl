@@ -7,7 +7,7 @@
 			<div class="row">
 				{formlabel label="Current URL" for=""}
 				{forminput}
-					{$smarty.server.PHP_SELF}
+					{$smarty.server.SCRIPT_NAME}
 				{/forminput}
 			</div>
 
