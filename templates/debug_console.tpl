@@ -2,7 +2,7 @@
 
 {if $gBitUser->isAdmin() and $gBitSystem->isPackageActive( 'debug' )}
 	<div class="debugconsole" id="debugconsole" style="position:absolute;background:#fed;top:30px;left:40%;right:1%;height:auto;z-index:2;padding:5px;border:3px solid #900;font-size:12px;{$debugconsole_style}">
-		<a style="float:right;" href="javascript:toggle('debugconsole');" title="{tr}Close{/tr}">{biticon ipackage="icons" iname="window-close" iexplain=Close}</a>
+		<a style="float:right;" href="javascript:toggle('debugconsole');" title="{tr}Close{/tr}">{booticon iname="icon-remove"  ipackage="icons"  iexplain=Close}</a>
 		{form legend="Debugger Console"}
 			<div class="control-group">
 				{formlabel label="Current URL" for=""}
