@@ -4,7 +4,7 @@
 	<input type="hidden" name="page" value="{$page}" />
 	{legend legend="Debug Settings"}
 		{foreach from=$formDebugAdmin key=feature item=output}
-			<div class="row">
+			<div class="control-group">
 				{formlabel label=`$output.label` for=$feature}
 				{forminput}
 					{html_checkboxes name="$feature" values="y" checked=$gBitSystem->getConfig($feature) labels=false id=$feature}
@@ -12,7 +12,7 @@
 				{/forminput}
 			</div>
 		{/foreach}
-		<div class="row submit">
+		<div class="control-group submit">
 			<input type="submit" name="tikiTabSubmit" value="{tr}Change preferences{/tr}" />
 		</div>
 	{/legend}

@@ -4,14 +4,14 @@
 	<div class="debugconsole" id="debugconsole" style="position:absolute;background:#fed;top:30px;left:40%;right:1%;height:auto;z-index:2;padding:5px;border:3px solid #900;font-size:12px;{$debugconsole_style}">
 		<a style="float:right;" href="javascript:toggle('debugconsole');" title="{tr}Close{/tr}">{biticon ipackage="icons" iname="window-close" iexplain=Close}</a>
 		{form legend="Debugger Console"}
-			<div class="row">
+			<div class="control-group">
 				{formlabel label="Current URL" for=""}
 				{forminput}
 					{$smarty.server.SCRIPT_NAME}
 				{/forminput}
 			</div>
 
-			<div class="row">
+			<div class="control-group">
 				{formlabel label="Command" for="command"}
 				{forminput}
 					<input type="text" name="command" id="command" size="90" value="{$command|escape}" />
@@ -19,7 +19,7 @@
 				{/forminput}
 			</div>
 
-			<div class="row submit">
+			<div class="control-group submit">
 				<input type="submit" name="exec" value="{tr}Execute{/tr}" />
 			</div>
 		{/form}
