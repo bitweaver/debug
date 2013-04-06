@@ -42,7 +42,7 @@ if (isset($_REQUEST["command"])) {
 // Bcouse 'exec' can change state of smth so tabs content should be changed...
 $tabs_list = $debugger->background_tabs_draw();
 // Add results tab which is always exists...
-$tabs_list["console"] = $gBitSmarty->fetch("bitpackage:debug/debug_console_tab.tpl");
+// $tabs_list["console"] = $gBitSmarty->fetch("bitpackage:debug/debug_console_tab.tpl");
 ksort ($tabs_list);
 $tabs = array();
 
