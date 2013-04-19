@@ -1,3 +1,2 @@
-<li>
-{if $packageMenuTitle}<a href="javascript:toggle('debugconsole');">{tr}Debugger console{/tr}</a>{/if}
-</li>
+{if $packageMenuTitle}<a class="nosubmenu"href="javascript:toggle('debugconsole');">{tr}Debugger console{/tr}</a>{/if}
+
