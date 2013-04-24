@@ -1,6 +1,6 @@
 {* $Header$ *}
 
-<table class="data">
+<table class="table data">
 	<caption>{tr}Page generation debugging log{/tr}</caption>
 	{section name=i loop=$messages}
 		<tr class="{cycle values="odd,even"}">
