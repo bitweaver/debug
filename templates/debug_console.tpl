@@ -20,7 +20,7 @@
 			</div>
 
 			<div class="control-group submit">
-				<input type="submit" class="btn" name="exec" value="{tr}Execute{/tr}" />
+				<input type="submit" class="btn btn-default" name="exec" value="{tr}Execute{/tr}" />
 			</div>
 		{/form}
 

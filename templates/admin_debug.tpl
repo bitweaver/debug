@@ -13,7 +13,7 @@
 			</div>
 		{/foreach}
 		<div class="control-group submit">
-			<input type="submit" class="btn" name="tikiTabSubmit" value="{tr}Change preferences{/tr}" />
+			<input type="submit" class="btn btn-default" name="tikiTabSubmit" value="{tr}Change preferences{/tr}" />
 		</div>
 	{/legend}
 {/form}
